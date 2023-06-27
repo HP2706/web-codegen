@@ -1,0 +1,10 @@
+{
+    "compilerOptions": {
+        "target": "es6",
+        "module": "es2015",
+        "moduleResolution": "nodenext",
+        "lib": ["dom"]
+    },
+    "include": ["popup.ts", "background.ts", "content.ts" ],
+    "exclude": ["node_modules"]
+}

@@ -1,0 +1,25 @@
+{
+    "manifest_version": 3,
+    "name": "web-copilot",
+    "version": "1.0",
+    "description": "A web copilot to help you write code on kaggle or google colab",
+    "action": {
+      "default_popup": "popup.html",
+      "default_icon": {
+        "16": "logo.png"
+      }
+    },
+    "permissions": [
+        "storage",
+        "tabs",
+        "activeTab"],
+    "content_scripts": [{
+    "matches": ["https://www.kaggle.com/*", "https://colab.research.google.com/*"],
+    "js": ["content.js"],
+    "run_at": "document_start"
+      }],
+    "background": {
+      "service_worker": "background.js"
+    }
+  }
+  
